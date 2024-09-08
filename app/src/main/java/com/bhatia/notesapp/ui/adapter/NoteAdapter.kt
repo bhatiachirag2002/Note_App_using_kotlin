@@ -6,13 +6,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bhatia.notesapp.R
 import com.bhatia.notesapp.databinding.NotesLayoutBinding
 import com.bhatia.notesapp.model.Note
 import com.bhatia.notesapp.ui.fragments.HomeFragmentDirections.actionHomeFragmentToEditNotesFragment
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     class NoteViewHolder(val itemBinding: NotesLayoutBinding) : RecyclerView.ViewHolder(itemBinding.root)
@@ -22,7 +18,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
             return oldItem.id == newItem.id &&
                     oldItem.title == newItem.title &&
                     oldItem.description == newItem.description &&
-                    oldItem.date == newItem.date
+                    oldItem.noteTiming == newItem.noteTiming
         }
 
         override fun areContentsTheSame(oldItem: Note, newItem: Note): Boolean {
@@ -47,7 +43,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
       val currentNote = differ.currentList[position]
         holder.itemBinding.noteTitle.text = currentNote.title
         holder.itemBinding.noteDesc.text = currentNote.description
-        holder.itemBinding.noteTiming.text = currentNote.date
+        holder.itemBinding.noteTiming.text = currentNote.noteTiming
         holder.itemView.setOnClickListener{
             val direction = actionHomeFragmentToEditNotesFragment(currentNote)
             it.findNavController().navigate(direction)

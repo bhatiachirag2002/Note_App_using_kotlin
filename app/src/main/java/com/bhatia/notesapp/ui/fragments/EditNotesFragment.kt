@@ -63,10 +63,11 @@ class EditNotesFragment : Fragment(R.layout.fragment_edit_notes),MenuProvider {
             val title = binding.editNoteTitle.text.toString().trim()
             val description = binding.editNoteDesc.text.toString().trim()
             val d = Date()
-            val date: CharSequence = DateFormat.format("hh:mm a MMMM d, yyyy", d.time).toString().replace("am", "AM").replace("pm", "PM")
+            val noteTiming: CharSequence = DateFormat.format("hh:mm a MMMM d, yyyy", d.time).toString().replace("am", "AM").replace("pm", "PM")
+            val date: CharSequence = DateFormat.format("hh:mm:ss a MMMM d, yyyy", d.time)
 
             if (description.isNotEmpty() || title.isNotEmpty()) {
-                val note = Note(currentNote.id, title, description, date.toString())
+                val note = Note(currentNote.id, title, description,noteTiming.toString(), date.toString())
                 notesViewModel.editNote(note)
                 Toast.makeText(context, "Note Added Successfully", Toast.LENGTH_SHORT).show()
                 view.findNavController().popBackStack(R.id.homeFragment, false)
