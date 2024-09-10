@@ -1,9 +1,7 @@
 package com.bhatia.notesapp
 
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bhatia.notesapp.db.NoteDatabase
 import com.bhatia.notesapp.repo.NoteRepo

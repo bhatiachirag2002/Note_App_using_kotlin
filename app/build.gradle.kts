@@ -72,4 +72,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     // Annotation processor
     ksp(libs.androidx.lifecycle.compiler)
+
+    //Responsive layout
+    //for dp
+    implementation(libs.sdp)
+    implementation(libs.ssp)
 }

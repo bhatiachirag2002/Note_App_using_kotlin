@@ -1,4 +1,4 @@
-package com.bhatia.notesapp.repo;
+package com.bhatia.notesapp.repo
 
 
 import com.bhatia.notesapp.model.Note

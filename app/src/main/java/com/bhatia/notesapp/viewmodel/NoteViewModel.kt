@@ -3,7 +3,6 @@ package com.bhatia.notesapp.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.room.Query
 import com.bhatia.notesapp.model.Note
 import com.bhatia.notesapp.repo.NoteRepo
 import kotlinx.coroutines.launch

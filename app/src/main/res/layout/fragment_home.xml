@@ -37,12 +37,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:gravity="center"
-            android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent"
             >
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
                 android:src="@drawable/notes"
                 />
 
@@ -50,7 +49,7 @@
                 style="@style/lightColorText"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="No notes here yet"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_15ssp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

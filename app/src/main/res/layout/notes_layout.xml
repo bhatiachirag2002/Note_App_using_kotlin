@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@drawable/yellow_frame"
-            android:padding="16dp">
+            android:padding="@dimen/_6sdp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -29,17 +29,17 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Note Title"
                 android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/_12ssp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/noteDesc"
                 android:maxLines="7"
-                android:layout_marginTop="8dp"
-                android:maxHeight="176dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:maxHeight="@dimen/_170sdp"
                 android:text="Description"
-                android:textSize="16sp"
+                android:textSize="@dimen/_11ssp"
                 android:fontFamily="@font/poppins"
                 android:textColor="@color/black"/>
 
@@ -47,9 +47,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/noteTiming"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:text="Time"
-                android:textSize="12sp"
+                android:textSize="@dimen/_9ssp"
                 android:fontFamily="@font/poppins"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
